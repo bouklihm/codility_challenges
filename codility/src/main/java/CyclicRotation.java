@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class CyclicRotation {
 
     public int[] solution(int[] arrayA, int rotations) {
+        if(arrayA.length < 2 || arrayA.length == rotations) return arrayA;
         while (rotations > arrayA.length) rotations = rotations - arrayA.length;
 
         int[] rotated = ArrayUtils.addAll(Arrays.copyOfRange(arrayA, arrayA.length-rotations, arrayA.length),

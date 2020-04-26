@@ -61,4 +61,13 @@ class CyclicRotationTest {
 
         assertArrayEquals(rotated, expected);
     }
+
+    @Test
+    void solutionRotationArrayEmpty() {
+        int[] arrayA = {};
+        int[] rotated = cyclicRotation.solution(arrayA, 25);
+        int[] expected = {};
+
+        assertArrayEquals(rotated, expected);
+    }
 }
